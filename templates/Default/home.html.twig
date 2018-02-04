@@ -1,0 +1,11 @@
+{% extends'base.html.twig' %}
+
+{% block title %}<h1>{{ 'default.home.titre'|trans }}</h1>{% endblock %}
+
+{% block body %}
+	<p>
+		Homepage
+	</p>
+	<a href="{{ path('tasks') }}">React</a>
+{% endblock %}
+

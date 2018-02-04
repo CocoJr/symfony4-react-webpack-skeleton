@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders "/" without crashing 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "tei9ht",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "tei9ht",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <App>
+      <Provider
+        store={
+          Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          }
+        }
+      >
+        <HashRouter>
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <Switch>
+              <Route
+                component={[Function]}
+                computedMatch={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                exact={true}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                path="/"
+              >
+                <Connect(Index)
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "createHref": [Function],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <Index
+                    dispatch={[Function]}
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isFetching={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                    tasks={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "title": "TEST",
+                        },
+                      ]
+                    }
+                  >
+                    <ul>
+                      <h1>
+                        Title
+                      </h1>
+                      <li
+                        className="list-item"
+                        key="1"
+                      >
+                        <Link
+                          replace={false}
+                          to="/tasks/1"
+                        >
+                          <a
+                            href="#/tasks/1"
+                            onClick={[Function]}
+                          >
+                             by 
+                            TEST
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </Index>
+                </Connect(Index)>
+              </Route>
+            </Switch>
+          </Router>
+        </HashRouter>
+      </Provider>
+    </App>
+  </Router>
+</MemoryRouter>
+`;

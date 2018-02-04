@@ -1,0 +1,4 @@
+framework:
+    router:
+        strict_requirements: true
+        https_port: 443
