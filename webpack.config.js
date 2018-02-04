@@ -1,9 +1,3 @@
-/*
- * @author Thibault Colette <thibaultcolette94@gmail.com>
- * @copyright 2018 Thibault Colette
- * @license Apache-2.0
- */
-
 var webpack = require('webpack');
 
 const BASE_ASSETS_DIR = './public/';
