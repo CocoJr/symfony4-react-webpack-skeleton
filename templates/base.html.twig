@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Symfony 4 + React with webpack skeleton</title>
-	<link rel="stylesheet" href="{{ asset('assets/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/app2.css') }}">
 	{% block stylesheets %}{% endblock %}
 </head>
 <body>
 {% block title %}{% endblock %}
 {% block body %}{% endblock %}
 
-<script type="text/javascript" src="{{ asset('assets/react-app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/react-app.js') }}"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ const DEV = process.env.ENV === 'dev';
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const WebpackManifestExtraPlugin = require('webpack-manifest-extra-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
@@ -82,11 +82,11 @@ let config = [
             new webpack.DefinePlugin({
                 API_V1_BASE_URL: '"' + process.env.API_V1_BASE_URL + '"',
             }),
-            new ExtractTextPlugin('[name]'),
+            new ExtractTextPlugin('[chunkhash:12].[name].js'),
             new CleanWebpackPlugin([ABSOLUTE_ASSETS_DIR + '/js'], cleanOptions),
-            new ManifestPlugin({
-                fileName: 'manifest.json',
-                basePath: WEB_ASSETS_DIR+'js/'
+            new WebpackManifestExtraPlugin({
+                filename: '../manifest.json',
+                publicPath: WEB_ASSETS_DIR+'js/',
             }),
         ],
         module: {
@@ -105,19 +105,19 @@ let config = [
             ]
         },
         output: {
-            filename: '[chunkhash:12].[name].css',
+            filename: '[name].css',
             path: ABSOLUTE_ASSETS_DIR + '/css',
         },
         plugins: [
             new ExtractTextPlugin('[chunkhash:12].[name].css'),
             new CleanWebpackPlugin([ABSOLUTE_ASSETS_DIR + '/css'], cleanOptions),
-            new ManifestPlugin({
-                fileName: 'manifest.json',
-                basePath: WEB_ASSETS_DIR+'css/'
+            new WebpackManifestExtraPlugin({
+                filename: '../manifest.json',
+                publicPath: WEB_ASSETS_DIR+'css/',
             }),
         ],
         module: {
-            rules: [rules.ressources, rules.scss, rules.css]
+            rules: [rules.css, rules.ressources, rules.scss]
         },
     },
 ];
